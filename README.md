@@ -88,7 +88,7 @@ The `omnifyApp` folder contains the following files:
     USE_TZ = True
 
 ### API DOCUMENTATION LINK
-    [my GitHub profile](https://documenter.getpostman.com/view/35960963/2sB34iiz95)
+    [my API DOCUMENTATION]([https://documenter.getpostman.com/view/35960963/2sB34iiz95])
 
 
 
