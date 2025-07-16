@@ -88,9 +88,9 @@ The `omnifyApp` folder contains the following files:
     USE_TZ = True
 
 ### API DOCUMENTATION LINK
-- IN this documentation can view how the input is passed and its coresponding response with example.
+- In this documentation can view how the input is passed and its coresponding response with example.
 
-   [my API DOCUMENTATION](https://documenter.getpostman.com/view/35960963/2sB34iiz95)
+   [MY API DOCUMENTATION](https://documenter.getpostman.com/view/35960963/2sB34iiz95)
 
 
 
