@@ -32,7 +32,6 @@ The `omnifyApp` folder contains the following files:
 - `apps.py`
 - `models.py`
 - `serializers.py`
-- `tests.py`
 - `urls.py`
 - `views.py`
 
@@ -45,8 +44,8 @@ The `omnifyApp` folder contains the following files:
   Marks the folder as a Python package.
 
 - **`apps.py`**  
-  Contains app configuration and metadata.
-
+  Contains app informations.
+  
 - **`models.py`**  
   Defines the database models. In this project, two models are created:
   - **Fitness**  
@@ -57,22 +56,39 @@ The `omnifyApp` folder contains the following files:
       - instructor name
       - available slots
 
-  - **Book**  
-    (Add description here if applicable.)
+  - **Book**
+     - Fields:
+      - fitness(ForeignKey of Fitness class)
+      - client_name
+      - client_email
 
 - **`serializers.py`**  
   Contains serializers used for converting model instances to JSON and vice versa.
 
-- **`tests.py`**  
-  Contains test cases for the application.
-
 - **`urls.py`**  
-  Maps URL paths to views.
+  Maps URL paths to views
 
 - **`views.py`**  
   Contains the business logic and API views.
 
 ---
+
+- **`setting.py`**  
+  It is the configuration file of the project. It tells Django how to run your app.
+
+
+### Working
+
+-  Fitness class creation using the required fields(name,type,date,instructor name,slots).here (name,type,instructor name and slot are character field),(date is datetime field) and(email is email field).POST API(**`FitnessAPIView`** ) is used for Fitness class creation.
+-  GET API (**`FitnessAPIView`** ) class is used to get a list of all upcoming fitness classes (name, date/time, instructor, available slots).
+-  Client Booking through POST API (**`BookingAPIView`**) using fields(fitness(class_id),client_name and client_email). once the booking is made then the slot is reduced.
+-  GET API (**BookingAPIView**) Returns all bookings made by a specific email address, this email is passed as a params in the request. 
+- in setting.py file Timezone management is done by changing  
+    TIME_ZONE = 'Asia/Kolkata'
+    USE_TZ = True
+
+### API DOCUMENTATION LINK
+    [my GitHub profile](https://documenter.getpostman.com/view/35960963/2sB34iiz95)
 
 
 
